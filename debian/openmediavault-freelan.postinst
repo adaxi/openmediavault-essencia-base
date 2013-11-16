@@ -1,0 +1,61 @@
+#!/bin/sh
+#
+# @license   http://www.gnu.org/licenses/gpl.html GPL Version 2
+# @author    Gerik Bonaert <dev@adaxisoft.be>
+# @copyright Copyright (c) 2013 Gerik Bonaert
+#
+# Freelan for OpenMediaVault is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# any later version.
+#
+# OpenMediaVault is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
+
+set -e
+
+. /etc/default/openmediavault
+. /usr/share/openmediavault/scripts/helper-functions
+
+case "$1" in
+	configure)
+		########################################################################
+		# Create essencial user.
+		# All services that do not require any specific user should use the 
+		# essential user. This was done to avoid using root.
+		########################################################################
+
+		getent passwd essencial || useradd essencial --system
+		
+		########################################################################
+		# Add repositories.
+		#  - Freelan
+		#  - adaxisoft.be
+		#  - debian contrib and non-free
+		########################################################################
+		
+		echo "deb http://debian.freelan.org/ wheezy-backports main" > /etc/apt/sources.list.d/freelan.list
+		wget -q http://debian.freelan.org/debian.freelan.org.key -O- | apt-key add -
+		
+		echo "deb http://apt.adaxisoft.be/debian wheezy main" > /etc/apt/sources.list.d/media.list
+		wget -q http://apt.adaxisoft.be/public.gpg.key -O- | apt-key add -
+		
+		echo "deb http://ftp.belnet.be/debian/ wheezy contrib non-free" > /etc/apt/sources.list.d/contrib.list
+		
+	;;
+
+	abort-upgrade|abort-remove|abort-deconfigure)
+	;;
+
+	*)
+		echo "postinst called with unknown argument '$1'" >&2
+		exit 1
+	;;
+esac
+
+exit 0
