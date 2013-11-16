@@ -30,7 +30,7 @@ case "$1" in
 		# essential user. This was done to avoid using root.
 		########################################################################
 
-		getent passwd essencial || useradd essencial --system
+		getent passwd essencia || useradd --system essencia
 		
 		########################################################################
 		# Add repositories.
