@@ -30,7 +30,7 @@ case "$1" in
 		# essential user. This was done to avoid using root.
 		########################################################################
 
-		getent passwd essencia || useradd --system --user-group --home-dir /var/lib/essencia essencia
+		getent passwd essencia || useradd --system --user-group --home-dir /var/lib/essencia --create-home essencia
 		
 		########################################################################
 		# Add repositories.
