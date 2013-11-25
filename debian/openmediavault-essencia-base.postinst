@@ -33,11 +33,15 @@ case "$1" in
 		getent passwd essencia || useradd --system --user-group --home-dir /var/lib/essencia --create-home essencia
 		
 		########################################################################
-		# Add repositories.
+		# Add repositories
+		#  - Btsync
 		#  - Freelan
 		#  - adaxisoft.be
 		#  - debian contrib and non-free
 		########################################################################
+		
+		apt-key adv --keyserver keys.gnupg.net --recv-keys 6BF18B15
+		echo "deb http://debian.yeasoft.net/btsync wheezy main" > /etc/apt/sources.list.d/btsync.list
 		
 		echo "deb http://debian.freelan.org/ wheezy-backports main" > /etc/apt/sources.list.d/freelan.list
 		wget -q http://debian.freelan.org/debian.freelan.org.key -O- | apt-key add -
