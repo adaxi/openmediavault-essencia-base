@@ -8,7 +8,7 @@ Homepage: http://adaxisoft.be
 
 Package: openmediavault-essencia-base
 Architecture: all
-Depends: openmediavault (>= 0.5.7), ntp 
+Depends: ntp 
 Priority: optional
 Description: Scaffolding for essencial packages.
  Adds repositories, users and libraries required to install other essencial 
