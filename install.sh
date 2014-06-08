@@ -21,10 +21,7 @@
 # Postfix is required by OpenMediaVault.
 dpkg -P exim4
 
-apt-get update
-apt-get install ntp
-
-wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.4_all.deb -O /tmp/essencia.deb
+wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.5_all.deb -O /tmp/essencia.deb
 dpkg -i /tmp/essencia.deb
 apt-get update
 apt-get install openmediavault-essencia -y
