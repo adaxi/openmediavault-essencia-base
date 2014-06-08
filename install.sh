@@ -27,4 +27,4 @@ apt-get install ntp
 wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.4_all.deb -O /tmp/essencia.deb
 dpkg -i /tmp/essencia.deb
 apt-get update
-apt-get install openmediavault-essencia
+apt-get install openmediavault-essencia -y
