@@ -17,7 +17,11 @@
 # You should have received a copy of the GNU General Public License
 # along with Essencia for OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
 
+<<<<<<< HEAD
 wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.4_all.deb -O /tmp/essencia.deb
+=======
+wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.3_all.deb -O /tmp/essencia.deb
+>>>>>>> 6473cf1246a670fb3b2517f962a503d9be62d640
 dpkg -i /tmp/essencia.deb
 apt-get update
 apt-get install openmediavault-essencia
