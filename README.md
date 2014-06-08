@@ -6,12 +6,12 @@ OpenMediaVault.
 ## Components
 
 The following aditional plugins are added to a default OpenMediaVault installation:
- - *Addns* * to update a DynDNS record, so that the machine can be easly reachedable using DNS name.
- - *BTSync* to allow sharing NAS content with other users.
- - *Freelan* to easely create a private VPN.
- - *Sabnzbd* 
- - *Sickbeard*
- - *Couchpotato*
+ - **Addns** * to update a DynDNS record, so that the machine can be easly reachedable using DNS name.
+ - **BTSync** to allow sharing NAS content with other users.
+ - **Freelan** to easely create a private VPN.
+ - **Sabnzbd** 
+ - **Sickbeard**
+ - **Couchpotato**
 
 \* Component is currently usable.
 
