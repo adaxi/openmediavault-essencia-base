@@ -13,7 +13,7 @@ The following aditional plugins are added to a default OpenMediaVault installati
  - *Sickbeard*
  - *Couchpotato*
 
-* Component is currently usable.
+\* Component is currently usable.
 
 ## Readyness
 
@@ -23,7 +23,7 @@ You should not install this yet, unless you know what you are doing.
  
 Execute the following command in your terminal:
  
-wget https://raw.githubusercontent.com/adaxi/openmediavault-essencia-base/master/install.sh -O- | bash
+    $ wget https://raw.githubusercontent.com/adaxi/openmediavault-essencia-base/master/install.sh -O- | bash
 
 It will install a base package which adds repositories so that we are able to download
 the dependencies. The main package is then install. The main package will pull all the
