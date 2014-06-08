@@ -17,6 +17,10 @@
 # You should have received a copy of the GNU General Public License
 # along with Essencia for OpenMediaVault. If not, see <http://www.gnu.org/licenses/>.
 
+# Make sure exim is not installed otherwise postfix cannot be installed.
+# Postfix is required by OpenMediaVault.
+dpkg -P exim4
+
 apt-get update
 apt-get install ntp
 
