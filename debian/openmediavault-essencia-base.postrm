@@ -24,7 +24,10 @@ set -e
 
 case "$1" in
 	purge)
-		# Remove the configuration data
+	   rm -f /etc/apt/sources.list.d/btsync.list
+	   rm -f /etc/apt/sources.list.d/contrib.list
+	   rm -f /etc/apt/sources.list.d/freelan.list
+	   rm -f /etc/apt/sources.list.d/essencia.list
 	;;
 
 	remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)

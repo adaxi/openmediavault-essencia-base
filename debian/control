@@ -11,5 +11,5 @@ Architecture: all
 Depends: openmediavault (>= 0.5.7), ntp 
 Priority: optional
 Description: Scaffolding for essencial packages.
- Essencial base adds repositories, users and libraries
- needed to configure other packages.
+ Adds repositories, users and libraries required to install other essencial 
+ packages.
