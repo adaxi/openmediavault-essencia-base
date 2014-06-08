@@ -19,9 +19,6 @@
 
 set -e
 
-. /etc/default/openmediavault
-. /usr/share/openmediavault/scripts/helper-functions
-
 case "$1" in
 	purge)
 	   rm -f /etc/apt/sources.list.d/btsync.list

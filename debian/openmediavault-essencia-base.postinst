@@ -19,9 +19,6 @@
 
 set -e
 
-. /etc/default/openmediavault
-. /usr/share/openmediavault/scripts/helper-functions
-
 case "$1" in
 	configure)
 		########################################################################
@@ -48,6 +45,9 @@ case "$1" in
 		
 		echo "deb http://apt.adaxisoft.be/debian wheezy main" > /etc/apt/sources.list.d/essencia.list
 		wget -q http://apt.adaxisoft.be/public.gpg.key -O- | apt-key add -
+		
+		echo "deb http://packages.openmediavault.org/public/ kralizec main" > /etc/apt/sources.list.d/openmediavault.list
+		wget -q http://packages.openmediavault.org/public/archive.key -O- | apt-key add -
 		
 		echo "deb http://ftp.belnet.be/debian/ wheezy contrib non-free" > /etc/apt/sources.list.d/contrib.list
 		
