@@ -5,7 +5,7 @@ OpenMediaVault.
 
 ## Components
 
-The following aditional plugins are added to a default OpenMediaVault installation:
+The following aditional plugins are added to a default OpenMediaVault installation
 
 | Component | Description | Ready |
 |-----------|-------------|-------|
@@ -15,8 +15,6 @@ The following aditional plugins are added to a default OpenMediaVault installati
 | **Sabnzbd**  | | :red_circle: |
 | **Sickbeard** | | :red_circle: |
 | **Couchpotato** | | :red_circle: |
-
-\* Component is currently usable.
 
 ## Is it ready yet?
 
