@@ -27,7 +27,9 @@ case "$1" in
 		# essential user. This was done to avoid using root.
 		########################################################################
 
-		getent passwd essencia || useradd --system --user-group --home-dir /var/lib/essencia --create-home essencia
+		if ! getent passwd essencia >/dev/null 2>&1; then
+		  useradd --system --groups users --no-user-group --create-home --home-dir /var/lib/essencia --shell /usr/sbin/nologin essencia
+		fi
 		
 		########################################################################
 		# Add repositories
