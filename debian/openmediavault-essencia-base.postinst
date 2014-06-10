@@ -39,6 +39,7 @@ case "$1" in
 		#  - debian contrib and non-free
 		########################################################################
 		
+		echo "deb http://ftp.belnet.be/debian/ wheezy contrib non-free" > /etc/apt/sources.list.d/contrib.list
 		apt-key adv --keyserver keys.gnupg.net --recv-keys 6BF18B15
 		echo "deb http://debian.yeasoft.net/btsync wheezy main" > /etc/apt/sources.list.d/btsync.list
 		
@@ -50,11 +51,12 @@ case "$1" in
 		
 		echo "deb http://packages.openmediavault.org/public/ kralizec main" > /etc/apt/sources.list.d/openmediavault.list
 		echo "deb http://packages.omv-extras.org/debian/ kralizec main" >> /etc/apt/sources.list.d/openmediavault.list
-		echo "deb http://packages.omv-extras.org/debian/ kralizec-testing main" >> /etc/apt/sources.list.d/openmediavault.list		
-
+		echo "deb http://packages.omv-extras.org/debian/ kralizec-testing main" >> /etc/apt/sources.list.d/openmediavault.list
+		echo "deb http://packages.omv-extras.org/debian/ kralizec-btsync main" >> /etc/apt/sources.list.d/openmediavault.list		
+        
 		wget -q http://packages.openmediavault.org/public/archive.key -O- | apt-key add -
 		
-		echo <<EOF | apt-key add -
+		cat <<EOF | apt-key add -
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v1.4.12 (GNU/Linux)
 
@@ -86,11 +88,7 @@ T/Zc8RDKTDUUbs6riM5zMBbbbukttrGkbE/dnyNKU7wrnA==
 =hMRE
 -----END PGP PUBLIC KEY BLOCK-----
 EOF
-
-
 		
-		
-		echo "deb http://ftp.belnet.be/debian/ wheezy contrib non-free" > /etc/apt/sources.list.d/contrib.list
 		
 	;;
 
