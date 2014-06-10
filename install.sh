@@ -24,8 +24,5 @@ dpkg -P exim4
 wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.5_all.deb -O /tmp/essencia.deb
 dpkg -i /tmp/essencia.deb
 
-wget http://omv-extras.org/debian/pool/main/o/openmediavault-omvextrasorg/openmediavault-omvextrasorg_0.6.22_all.deb -O /tmp/omv-extras.deb
-dpkg -i /tmp/omv-extras.deb
-
 apt-get update
 apt-get install openmediavault-essencia -y
