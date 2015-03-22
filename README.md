@@ -10,10 +10,10 @@ The following aditional plugins are added to a default OpenMediaVault installati
 | Component | Description | Ready |
 |-----------|-------------|-------|
 | **Addns** | Update DynDNS records | :white_check_mark: |
-| **BTSync** | Share content using bittorrent protocol  | :red_circle: |
+| **BTSync** | Share content using bittorrent protocol  | :white_check_mark: |
 | **Freelan** | Connect your machines using VPN software | :white_check_mark: |
 | **Sabnzbd**  | | :white_check_mark: |
-| **Sickbeard** | | :red_circle: |
+| **Sickbeard** | | :white_check_mark: |
 | **Couchpotato** | | :red_circle: |
 
 ## Is it ready yet?
