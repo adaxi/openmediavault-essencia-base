@@ -21,7 +21,7 @@
 # Postfix is required by OpenMediaVault.
 dpkg -P exim4
 
-wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.8_all.deb -O /tmp/essencia.deb
+wget http://apt.adaxisoft.be/debian/pool/main/o/openmediavault-essencia-base/openmediavault-essencia-base_0.9_all.deb -O /tmp/essencia.deb
 dpkg -i /tmp/essencia.deb
 
 apt-get update
