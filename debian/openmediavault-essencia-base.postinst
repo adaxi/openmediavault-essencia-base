@@ -43,18 +43,18 @@ case "$1" in
 		apt-key adv --keyserver keys.gnupg.net --recv-keys 6BF18B15
 		echo "deb http://debian.yeasoft.net/btsync wheezy main" > /etc/apt/sources.list.d/btsync.list
 		
-		echo "deb http://debian.freelan.org/ wheezy-backports main" > /etc/apt/sources.list.d/freelan.list
-		wget -q http://debian.freelan.org/debian.freelan.org.key -O- | apt-key add -
+		# echo "deb http://debian.freelan.org/ wheezy-backports main" > /etc/apt/sources.list.d/freelan.list
+		# wget -q http://debian.freelan.org/debian.freelan.org.key -O- | apt-key add -
 		
 		echo "deb http://apt.adaxisoft.be/debian wheezy main" > /etc/apt/sources.list.d/essencia.list
 		wget -q http://apt.adaxisoft.be/public.gpg.key -O- | apt-key add -
 		
-		echo "deb http://packages.openmediavault.org/public/ kralizec main" > /etc/apt/sources.list.d/openmediavault.list
-		echo "deb http://packages.omv-extras.org/debian/ kralizec main" >> /etc/apt/sources.list.d/openmediavault.list
-		echo "deb http://packages.omv-extras.org/debian/ kralizec-testing main" >> /etc/apt/sources.list.d/openmediavault.list
-		echo "deb http://packages.omv-extras.org/debian/ kralizec-btsync main" >> /etc/apt/sources.list.d/openmediavault.list		
+		#echo "deb http://packages.openmediavault.org/public/ kralizec main" > /etc/apt/sources.list.d/openmediavault.list
+		#echo "deb http://packages.omv-extras.org/debian/ kralizec main" >> /etc/apt/sources.list.d/openmediavault.list
+		#echo "deb http://packages.omv-extras.org/debian/ kralizec-testing main" >> /etc/apt/sources.list.d/openmediavault.list
+		#echo "deb http://packages.omv-extras.org/debian/ kralizec-btsync main" >> /etc/apt/sources.list.d/openmediavault.list		
         
-		wget -q http://packages.openmediavault.org/public/archive.key -O- | apt-key add -
+		# wget -q http://packages.openmediavault.org/public/archive.key -O- | apt-key add -
 		
 		cat <<EOF | apt-key add -
 -----BEGIN PGP PUBLIC KEY BLOCK-----
